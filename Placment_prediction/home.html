@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?AI,ML') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 70vw;
+            max-width: 900px;
+        }
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .form-group input, .form-group select {
+            flex: 1;
+            min-width: 30%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        input, select, button {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        @media (max-width: 800px) {
+            .container {
+                width: 90vw;
+            }
+            .form-group input, .form-group select {
+                min-width: 45%;
+            }
+        }
+        @media (max-width: 500px) {
+            .form-group {
+                flex-direction: column;
+            }
+            .form-group input, .form-group select {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Placement Input Form</h2>
+        <form id="placementForm">
+            <div class="form-group">
+                <input type="number" id="cgpa" placeholder="Enter CGPA (1-10)" min="1" max="10" required>
+                <select id="internships">
+                    <option value="">Have you done an internship?</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="number" id="projects" placeholder="Number of Projects" min="2" required>
+                <input type="number" id="workshops" placeholder="Number of Workshops" min="2" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="aptitude" placeholder="Aptitude Test Score (40-100)" min="40" max="100" required>
+                <input type="number" id="softskill" placeholder="Soft Skill Rating (1-5)" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="extra" placeholder="Extracurricular Activities (2+)" min="2" required>
+                <select id="branch">
+                    <option value="">Select Branch</option>
+                    <option value="CSE">CSE</option>
+                    <option value="EE">EE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EIE">EIE</option>
+                    <option value="CE">CE</option>
+                    <option value="CHE">CHE</option>
+                    <option value="BE">BE</option>
+                    <option value="PE">PE</option>
+                    <option value="ME">ME</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="number" id="leetcode" placeholder="Leetcode Problems (1000-2000)" min="1000" max="2000" required>
+                <input type="number" id="codeforces" placeholder="Codeforces Rating" min="1" max="5" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
